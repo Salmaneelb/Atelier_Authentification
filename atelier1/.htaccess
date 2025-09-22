@@ -1,4 +1,4 @@
 AuthName "Accès protégé"
 AuthType Basic
-AuthUserFile /home/{salmane}/www/.htpasswd
+AuthUserFile /home/salmane/www/.htpasswd
 Require valid-user
