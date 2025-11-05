@@ -1,17 +1,12 @@
-<?php 
+<?php
+session_start();
 
-session_start(); 
-
-if (isset($_COOKIE['authToken'], $_SESSION['authToken']) &&
-    $_COOKIE['authToken'] === $_SESSION['authToken'] ) {
-    header('Location: page_admin.php');
+if (!isset($_COOKIE['authToken'], $_SESSION['authToken']) ||
+    $_COOKIE['authToken'] !== $_SESSION['authToken']) {
+    header('Location: index.php');
     exit();
 }
 
+// Ici, l’utilisateur est authentifié
 ?>
-
-
-<html>
-
-  <h1> Bienvue sur la page USER</h1>
-</html>
+<h1>Bienvenue dans page_user.php</h1>
