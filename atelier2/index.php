@@ -7,7 +7,7 @@ session_start();
 
 if (isset($_COOKIE['authToken'], $_SESSION['authToken']) &&
     $_COOKIE['authToken'] === $_SESSION['authToken'] ) {
-    header('Location: page_admin.php');
+    header('Location: page_user.php');
     exit();
 }
 
